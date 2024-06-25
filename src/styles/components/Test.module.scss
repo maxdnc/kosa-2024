@@ -1,0 +1,6 @@
+.test {
+  color: $primary;
+  @include breakpoint('medium') {
+    color: $black;
+  }
+}
