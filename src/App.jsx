@@ -7,7 +7,7 @@ import HomePage from './components/pages/Home/HomePage.jsx';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/kosa-2024/">
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
