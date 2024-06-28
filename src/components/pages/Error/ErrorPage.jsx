@@ -1,12 +1,11 @@
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const ErrorPage = () => {
-  const location = useLocation();
   return (
     <div>
-      <h1>Error 404: Page Not Found</h1>
-      <p>The page {location.pathname} does not exist.</p>
-      <Link to="/">Go back to Home</Link>
+      <h1>404</h1>
+      <p>Oups! La page que vous demandez n&apos;existe pas.</p>
+      <Link to="/">Retourner sur la page d’accueil</Link>
     </div>
   );
 };
