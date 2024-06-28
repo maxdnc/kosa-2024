@@ -1,4 +1,4 @@
-import { Link, useParams } from 'react-router-dom';
+import { Link, Navigate, useParams } from 'react-router-dom';
 import accommodationsData from '../../../api/accommodations.json';
 
 const DetailPage = () => {
@@ -6,9 +6,12 @@ const DetailPage = () => {
   const accommodationData = accommodationsData.find(
     (accommodation) => accommodation.id === id
   );
+
+  if (!accommodationData) {
+    return <Navigate to="/error" />;
+  }
   const { title, cover, description } = accommodationData;
 
-  console.log(accommodationData);
   return (
     <div>
       <Link to="/">Back to Home</Link>
