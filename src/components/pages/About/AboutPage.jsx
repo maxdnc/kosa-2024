@@ -17,7 +17,7 @@ const AboutPage = () => {
           <Accordion
             key={accordion.id}
             label={accordion.label}
-            description={accordion.description}
+            content={accordion.description}
           />
         ))}
       </div>

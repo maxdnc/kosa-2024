@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 import styles from '../../styles/components/reusable-UI/Accordion.module.scss';
 import ArrowUpIcon from '../../assets/svg/ArrowUpIcon';
 
-const Accordion = ({ label, description }) => {
+const Accordion = ({ label, content }) => {
   const [isOpen, setIsOpen] = useState(false);
   const contentRef = useRef(null);
 
@@ -20,6 +20,26 @@ const Accordion = ({ label, description }) => {
     }
   }, [isOpen]);
 
+  const renderContent = () => {
+    if (Array.isArray(content)) {
+      return (
+        <ul className={`${styles.list} ${isOpen ? styles.open : ''}`}>
+          {content.map((item, index) => (
+            <li key={index} className={styles.listItem}>
+              {item}
+            </li>
+          ))}
+        </ul>
+      );
+    } else {
+      return (
+        <p className={`${styles.description} ${isOpen ? styles.open : ''}`}>
+          {content}
+        </p>
+      );
+    }
+  };
+
   return (
     <div className={styles.accordion}>
       <div className={styles.header} onClick={toggleAccordion}>
@@ -30,11 +50,7 @@ const Accordion = ({ label, description }) => {
       </div>
       <div className={`${styles.contentWrapper} ${isOpen ? styles.open : ''}`}>
         <div className={styles.content} ref={contentRef}>
-          <div className={styles.inner}>
-            <p className={`${styles.description} ${isOpen ? styles.open : ''}`}>
-              {description}
-            </p>
-          </div>
+          <div className={styles.inner}>{renderContent()}</div>
         </div>
       </div>
     </div>
