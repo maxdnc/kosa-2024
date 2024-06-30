@@ -25,25 +25,23 @@ const SliderPictures = ({ images }) => {
   };
 
   return (
-    <div className={styles.galleryContainer}>
-      <div className={styles.slide}>
-        <img src={images[currentIndex]} alt={`Image de la location`} />
-        {hasMultipleImages && (
-          <div className={styles.leftArrow} onClick={goToPrevious}>
-            <ArrowLeft />
-          </div>
-        )}
-        {hasMultipleImages && (
-          <div className={styles.rightArrow} onClick={goToNext}>
-            <ArrowRight />
-          </div>
-        )}
-        {hasMultipleImages && (
-          <div className={styles.imageCounter}>
-            {currentIndex + 1} / {images.length}
-          </div>
-        )}
-      </div>
+    <div className={styles.slide}>
+      <img src={images[currentIndex]} alt={`Image de la location`} />
+      {hasMultipleImages && (
+        <div className={styles.leftArrow} onClick={goToPrevious}>
+          <ArrowLeft />
+        </div>
+      )}
+      {hasMultipleImages && (
+        <div className={styles.rightArrow} onClick={goToNext}>
+          <ArrowRight />
+        </div>
+      )}
+      {hasMultipleImages && (
+        <div className={styles.imageCounter}>
+          {currentIndex + 1} / {images.length}
+        </div>
+      )}
     </div>
   );
 };
