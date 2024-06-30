@@ -1,5 +1,10 @@
-.link {
-  &.active {
-    color: red;
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+
+  .wrapperLogo {
+    max-width: 145px;
   }
 }
