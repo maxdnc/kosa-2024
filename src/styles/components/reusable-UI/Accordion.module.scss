@@ -1,13 +1,16 @@
 .accordion {
+  width: 100%;
   .header {
     background-color: $primary;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    border-radius: 5px;
-
+    border-radius: 10px;
     cursor: pointer;
+    @include breakpoint('medium') {
+      padding-inline: 15px;
+    }
     .label {
       color: $white;
       font-size: 0.8125rem;
@@ -25,17 +28,40 @@
     }
   }
 
-  .content {
-    background-color: $gray-light;
-    padding: 10px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+  .contentWrapper {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
-    p {
+    &.open {
+      grid-template-rows: 1fr;
+    }
+  }
+
+  .content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    .inner {
+      background-color: rgba($gray-light, 0.5);
+      padding: 20px;
+      border-radius: 5px;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+
+    .description {
       color: $black;
       font-size: 0.75rem;
+      opacity: 0;
+      transition: opacity 0.4s ease-in;
       @include breakpoint('medium') {
         font-size: 1.125rem;
+      }
+      &.open {
+        opacity: 1;
+        transform: translateY(0);
       }
     }
   }
