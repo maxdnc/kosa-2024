@@ -1,20 +1,14 @@
-import { NavLink } from 'react-router-dom';
+import KasaLogo from '../../../assets/svg/KasaLogo.jsx';
 import styles from '../../../styles/components/Layout/Header/Header.module.scss';
-
-const getNavLinkClassName = ({ isActive }) =>
-  `${styles.link} ${isActive ? styles.active : ''}`;
+import NavLinks from './NavLinks.jsx';
 
 const Header = () => {
   return (
-    <header>
-      <nav>
-        <NavLink to="/" className={getNavLinkClassName}>
-          Accueil
-        </NavLink>
-        <NavLink to="/about" className={getNavLinkClassName}>
-          À propos
-        </NavLink>
-      </nav>
+    <header className={styles.header}>
+      <div className={styles.wrapperLogo}>
+        <KasaLogo />
+      </div>
+      <NavLinks />
     </header>
   );
 };
