@@ -1,0 +1,12 @@
+.accordionsList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-block: 20px;
+  @include breakpoint('medium') {
+    gap: 30px;
+    margin-block: 38px;
+  }
+}
