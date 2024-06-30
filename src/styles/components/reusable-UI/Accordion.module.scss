@@ -23,7 +23,7 @@
     .arrow {
       transition: transform 0.15s ease-in-out;
       &.arrowOpen {
-        transform: rotate(180deg);
+        transform: rotate(-180deg);
       }
     }
   }
@@ -49,19 +49,33 @@
       border-radius: 5px;
       border-bottom-left-radius: 5px;
       border-bottom-right-radius: 5px;
-    }
 
-    .description {
-      color: $black;
-      font-size: 0.75rem;
-      opacity: 0;
-      transition: opacity 0.4s ease-in;
-      @include breakpoint('medium') {
-        font-size: 1.125rem;
+      .description {
+        color: $black;
+        font-size: 0.75rem;
+        opacity: 0;
+        transition: opacity 0.4s ease-in;
+        @include breakpoint('medium') {
+          font-size: 1.125rem;
+        }
+        &.open {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
-      &.open {
-        opacity: 1;
-        transform: translateY(0);
+
+      .list {
+        color: $black;
+        font-size: 0.75rem;
+        opacity: 0;
+        transition: opacity 0.4s ease-in;
+        @include breakpoint('medium') {
+          font-size: 1.125rem;
+        }
+        &.open {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
     }
   }
