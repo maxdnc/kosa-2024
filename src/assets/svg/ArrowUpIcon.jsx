@@ -2,8 +2,8 @@ const ArrowUpIcon = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="33"
-      height="32"
+      width="24"
+      height="24"
       viewBox="0 0 33 32"
       fill="none"
     >
