@@ -79,4 +79,7 @@ main {
   width: 100%;
   margin-inline: auto;
   padding-inline: 20px;
+  @include breakpoint('xlarger') {
+    padding-inline: 0;
+  }
 }
