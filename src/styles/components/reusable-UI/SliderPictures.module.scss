@@ -1,0 +1,71 @@
+.galleryContainer {
+  .slide {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 255px;
+    @include breakpoint('medium') {
+      border-radius: 25px;
+      height: 415px;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .leftArrow {
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      top: 50%;
+      left: 16px;
+      transform: translateY(-50%);
+      z-index: 1;
+      cursor: pointer;
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+      @include breakpoint('medium') {
+        width: unset;
+        height: unset;
+      }
+    }
+    .rightArrow {
+      position: absolute;
+      top: 50%;
+      right: 16px;
+      transform: translateY(-50%);
+      z-index: 1;
+      cursor: pointer;
+      width: 24px;
+      height: 24px;
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+
+      @include breakpoint('medium') {
+        width: unset;
+        height: unset;
+      }
+    }
+
+    .imageCounter {
+      display: none;
+      @include breakpoint('medium') {
+        display: block;
+        position: absolute;
+        bottom: 25px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+        color: $white;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 500;
+      }
+    }
+  }
+}
