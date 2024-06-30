@@ -1,0 +1,33 @@
+.section {
+  margin-top: 22px;
+  margin-bottom: 27px;
+  @include breakpoint('xmedium') {
+    margin-top: 47px;
+
+    background-color: $gray-light;
+    padding: 56px 50px;
+    border-radius: 25px;
+  }
+
+  .listAccomodations {
+    width: 100%;
+    display: grid;
+    max-width: 800px;
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    justify-content: center;
+    gap: 20px;
+    @include breakpoint('medium') {
+      row-gap: 50px;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    }
+    @include breakpoint('xlarger') {
+      gap: 60px;
+      max-width: none;
+    }
+    li {
+      display: inline-flex;
+      margin-inline: auto;
+    }
+  }
+}
