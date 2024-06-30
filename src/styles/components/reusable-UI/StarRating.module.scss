@@ -1,0 +1,13 @@
+.starRating {
+  display: inline-flex;
+  gap: 5px;
+
+  svg {
+    width: 18px;
+    height: 18px;
+    @include breakpoint('medium') {
+      width: 36px;
+      height: 36px;
+    }
+  }
+}
