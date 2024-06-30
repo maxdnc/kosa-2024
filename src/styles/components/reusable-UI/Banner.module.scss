@@ -1,0 +1,56 @@
+.banner {
+  height: 111px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  @include breakpoint('medium') {
+    height: 223px;
+    margin-top: 5px;
+    border-radius: 25px;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+  }
+
+  .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+  }
+
+  .title {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translate(-16px, -50%);
+    color: $white;
+    font-size: 24px;
+    font-weight: 700;
+    z-index: 3;
+    width: 100%;
+    padding: 0 16px;
+    text-wrap: balance;
+    @include breakpoint('xsmall') {
+      text-align: center;
+    }
+    @include breakpoint('medium') {
+      font-size: 48px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &.opacityVariable {
+    &::after {
+      background: rgba(0, 0, 0, 0.6);
+    }
+  }
+}
