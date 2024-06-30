@@ -1,11 +1,11 @@
 import CardAccomodation from '../../reusable-UI/CardAccomodation.jsx';
 import accommodationsData from '../../../api/accommodations.json';
+import styles from '../../../styles/pages/Home/ListAccomodations.module.scss';
 
 const ListAccomodations = () => {
   return (
-    <div>
-      ListAccomodations
-      <ul>
+    <section className={styles.section}>
+      <ul className={styles.listAccomodations}>
         {accommodationsData.map(({ id, title, cover }) => {
           return (
             <li key={id}>
@@ -14,7 +14,7 @@ const ListAccomodations = () => {
           );
         })}
       </ul>
-    </div>
+    </section>
   );
 };
 export default ListAccomodations;
