@@ -25,6 +25,15 @@
       &.arrowOpen {
         transform: rotate(-180deg);
       }
+
+      svg {
+        width: 24px;
+        height: 24px;
+        @include breakpoint('medium') {
+          width: 32px;
+          height: 32px;
+        }
+      }
     }
   }
 
