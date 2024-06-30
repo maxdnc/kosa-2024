@@ -1,7 +1,7 @@
 import { Link, Navigate, useParams } from 'react-router-dom';
 import accommodationsData from '../../../api/accommodations.json';
 
-const DetailPage = () => {
+const AccommodationDetail = () => {
   const { id } = useParams();
   const accommodationData = accommodationsData.find(
     (accommodation) => accommodation.id === id
@@ -22,4 +22,4 @@ const DetailPage = () => {
     </div>
   );
 };
-export default DetailPage;
+export default AccommodationDetail;
