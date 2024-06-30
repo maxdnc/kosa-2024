@@ -1,0 +1,31 @@
+.landlord {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10.5px;
+  .name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: $primary;
+    text-align: right;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    width: max-content;
+    text-wrap: break-word;
+    overflow-wrap: break-word;
+    @include breakpoint('medium') {
+      font-size: 18px;
+    }
+  }
+  .picture {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    @include breakpoint('medium') {
+      width: 64px;
+      height: 64px;
+    }
+  }
+}
