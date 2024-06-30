@@ -2,8 +2,11 @@ $breakpoints: (
   'xsmall': 414px,
   'small': 576px,
   'medium': 768px,
+  'xmedium': 895px,
   'large': 992px,
+  'mlarge': 1115px,
   'xlarge': 1200px,
+  'xlarger': 1280px,
 );
 
 @mixin breakpoint($breakpoint) {
