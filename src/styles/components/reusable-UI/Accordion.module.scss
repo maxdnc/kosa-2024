@@ -1,0 +1,42 @@
+.accordion {
+  .header {
+    background-color: $primary;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+
+    cursor: pointer;
+    .label {
+      color: $white;
+      font-size: 0.8125rem;
+      font-weight: 700;
+      text-transform: capitalize;
+      @include breakpoint('medium') {
+        font-size: 1.5rem;
+      }
+    }
+    .arrow {
+      transition: transform 0.15s ease-in-out;
+      &.arrowOpen {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .content {
+    background-color: $gray-light;
+    padding: 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+    p {
+      color: $black;
+      font-size: 0.75rem;
+      @include breakpoint('medium') {
+        font-size: 1.125rem;
+      }
+    }
+  }
+}
