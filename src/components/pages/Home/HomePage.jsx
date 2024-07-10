@@ -1,6 +1,6 @@
 import ListAccomodations from './ListAccomodations.jsx';
 import Banner from '../../reusable-UI/Banner.jsx';
-import PictureBanner from '../../../../public/images/banner/PictureHomePage.png';
+import PictureBanner from '/images/banner/PictureHomePage.png';
 
 const HomePage = () => {
   return (
