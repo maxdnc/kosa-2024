@@ -41,7 +41,7 @@ const AccommodationDetailPage = () => {
           </div>
         </div>
         <div className={styles.wrapperStarLandlord}>
-          <StarRating rating={rating} />
+          <StarRating rating={rating} totalStars={5} />
           <LandlordAccommodation
             landlordName={host.name}
             imgLandlord={host.picture}
