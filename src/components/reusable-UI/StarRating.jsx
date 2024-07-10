@@ -1,8 +1,7 @@
 import StarIcon from '../../assets/svg/StarIcon.jsx';
 import styles from '../../styles/components/reusable-UI/StarRating.module.scss';
 
-const StarRating = ({ rating }) => {
-  const totalStars = 5;
+const StarRating = ({ rating, totalStars }) => {
   const ratingNumber = parseInt(rating) || 0;
 
   return (
