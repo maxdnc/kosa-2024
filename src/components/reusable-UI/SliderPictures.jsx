@@ -28,19 +28,19 @@ const SliderPictures = ({ images }) => {
     <div className={styles.slide}>
       <img src={images[currentIndex]} alt={`Image de la location`} />
       {hasMultipleImages && (
-        <div className={styles.leftArrow} onClick={goToPrevious}>
-          <ArrowLeft />
-        </div>
-      )}
-      {hasMultipleImages && (
-        <div className={styles.rightArrow} onClick={goToNext}>
-          <ArrowRight />
-        </div>
-      )}
-      {hasMultipleImages && (
-        <div className={styles.imageCounter}>
-          {currentIndex + 1} / {images.length}
-        </div>
+        <>
+          <div className={styles.leftArrow} onClick={goToPrevious}>
+            <ArrowLeft />
+          </div>
+
+          <div className={styles.rightArrow} onClick={goToNext}>
+            <ArrowRight />
+          </div>
+
+          <div className={styles.imageCounter}>
+            {currentIndex + 1} / {images.length}
+          </div>
+        </>
       )}
     </div>
   );
