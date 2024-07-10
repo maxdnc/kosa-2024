@@ -1,4 +1,4 @@
-import PictureBanner from '../../../../public/images/banner/PictureAboutPage.png';
+import PictureBanner from '/images/banner/PictureAboutPage.png';
 import styles from '../../../styles/pages/About/AboutPage.module.scss';
 import Accordion from '../../reusable-UI/Accordion.jsx';
 import Banner from '../../reusable-UI/Banner.jsx';
